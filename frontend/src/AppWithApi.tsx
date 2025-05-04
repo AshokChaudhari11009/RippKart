@@ -49,6 +49,7 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
+          <img src="logo192.png" className="App-logo" alt="logo" />
           <h1>API Data</h1>
           <p>User ID: {data.userId}</p>
           <p>Title: {data.title}</p>

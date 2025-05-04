@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
+// import App from "./App";
+// import App from "./AppWithRouter"; // Using AppWithRouter for routing example
+import App from "./AppWithApi"; // Using AppWithAPI for API example
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 
