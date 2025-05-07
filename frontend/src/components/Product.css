@@ -1,0 +1,27 @@
+.product-card {
+  transition: all 0.3s ease;
+  border: 2px solid #dee2e6;
+  border-radius: 8px;
+  overflow: hidden; 
+  margin: 8px;
+}
+
+.product-card:hover {
+  border-color: #86b7fe;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-card.expanded {
+  border-color: #0d6efd;
+  box-shadow: 0 4px 20px rgba(13, 110, 253, 0.25);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.additional-details {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
