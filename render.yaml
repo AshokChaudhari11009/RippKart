@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: backend
+    env: docker
+    plan: free
+    dockerfilePath: backend/Dockerfile
+    buildCommand: ""
+    startCommand: gunicorn django_app.wsgi:application --bind 0.0.0.0:8000
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        value: your-secret-key
+      - key: DEBUG
+        value: "False"
+      - key: MONGO_URI
+        value: mongodb://db:27017/mydb
+
+  - type: web
+    name: frontend
+    env: docker
+    plan: free
+    dockerfilePath: frontend/Dockerfile
+    buildCommand: ""
+    startCommand: nginx -g 'daemon off;'
+
+  - type: pserv
+    name: db
+    env: docker
+    plan: free
+    dockerfilePath: ""
+    image: mongo:latest
+    startCommand: ""
+    disk:
+      name: data
+      mountPath: /data/db
+      sizeGB: 1
